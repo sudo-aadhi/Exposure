@@ -35,7 +35,7 @@ const DiscordButton: React.FC<DiscordButtonProps> = ({
         rounded-[10px] shadow-md 
         transition-all duration-300 
         hover:shadow-lg cursor-pointer 
-        overflow-hidden
+        overflow-hidden z-10
       "
       style={buttonStyles}
     >
