@@ -38,7 +38,7 @@ const TheBannerComponent = () => {
         components that empower you to build stunning, high-performance
         interfaces.
       </h3>
-      <span className="flex items-center justify-center gap-[5px]">
+      <span className="flex items-center justify-center gap-[10px]">
         <Button
           width={120}
           height={40}
@@ -46,7 +46,11 @@ const TheBannerComponent = () => {
           position={45}
           context="Get Started"
         />
-        <DiscordButton />
+        <DiscordButton
+          position={45}
+          icon="https://svgshare.com/i/1C6W.svg"
+          context="Join our Discord"
+        />
       </span>
     </div>
   );
