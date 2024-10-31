@@ -2,6 +2,7 @@ import React from "react";
 import Badge from "../essentials/Badge";
 import Button from "../essentials/Button";
 import DiscordButton from "../essentials/DiscordButton";
+import { ParticlesComponent } from "../../../particles";
 
 const Hero = () => {
   return (
