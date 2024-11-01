@@ -33,7 +33,7 @@ const Hero: React.FC = () => (
 );
 
 // CommunityBadge component to display the badge with community information
-const CommunityBadge: React.FC<BadgeProps> = () => (
+const CommunityBadge: React.FC = () => (
   <Badge
     width={285}
     icon="https://svgshare.com/i/1C5H.svg"
