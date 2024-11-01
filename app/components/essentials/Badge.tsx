@@ -28,7 +28,7 @@ const Badge: React.FC<BadgeProps> = ({
         top: `${position}px`,
       }}
     >
-      <span className="flex items-center justify-center w-full h-full gap-[7px]">
+      <span className="flex items-center justify-center w-full h-[30px] gap-[7px]">
         <h2 className="font-jost">{context}</h2>
         <Image
           src={icon}
@@ -37,7 +37,7 @@ const Badge: React.FC<BadgeProps> = ({
           alt="ICON"
           draggable="false"
         />
-        <h2 className="opacity-50 font-jost">{secondaryContext}</h2>
+        <h2 className="opacity-50 font-jostThin">{secondaryContext}</h2>
       </span>
     </div>
   );
