@@ -4,6 +4,7 @@ import Button from "../essentials/Button";
 import DiscordButton from "../essentials/DiscordButton";
 import { ParticlesComponent } from "../../../particles";
 import GlowBackgroundContainer from "../essentials/GlowBackgroundContainer";
+import ScreenContainer from "../essentials/ScreenContainer";
 
 // Define the props for the Badge component
 interface BadgeProps {
@@ -27,6 +28,7 @@ const Hero: React.FC = () => (
     <CommunityBadge />
     <Banner />
     <GlowBackgroundContainer />
+    <ScreenContainer />
   </div>
 );
 
