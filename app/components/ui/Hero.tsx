@@ -2,9 +2,10 @@ import React from "react";
 import Badge from "../essentials/Badge";
 import Button from "../essentials/Button";
 import DiscordButton from "../essentials/DiscordButton";
-import { ParticlesComponent } from "../../../particles";
 import GlowBackgroundContainer from "../essentials/GlowBackgroundContainer";
 import ScreenContainer from "../essentials/ScreenContainer";
+import DescriptiveMotion from "../essentials/DescriptiveMotion";
+import AnimatedBentoGrids from "../essentials/AnimatedBentoGrids";
 
 // Define the props for the Badge component
 interface BadgeProps {
@@ -29,6 +30,8 @@ const Hero: React.FC = () => (
     <Banner />
     <GlowBackgroundContainer />
     <ScreenContainer />
+    <DescriptiveMotion />
+    <AnimatedBentoGrids />
   </div>
 );
 

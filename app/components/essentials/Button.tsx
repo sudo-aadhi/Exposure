@@ -17,7 +17,7 @@ const Button: React.FC<ButtonProp> = ({
 }) => {
   return (
     <div
-      className="relative flex items-center justify-center bg-gray-400 rounded-[12px] bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-15 cursor-pointer z-10 shadow-md"
+      className="relative flex items-center justify-center bg-gray-400 rounded-[12px] bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-15 cursor-pointer z-20 shadow-md"
       style={{
         width: `${width + 4}px`,
         height: `${height + 4}px`,
