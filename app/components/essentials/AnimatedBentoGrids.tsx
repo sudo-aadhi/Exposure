@@ -5,10 +5,10 @@ const AnimatedBentoGrids = () => {
   return (
     <div className="flex flex-col items-center w-[952px] h-[596px] absolute top-[1680px]">
       <WidedAnimatedBentoGrid />
-      {/* <div className="w-full flex gap-[22px] mt-[28px]">
+      <div className="w-full flex gap-[22px] mt-[28px]">
         <SmallAnimatedBentoGridLeft />
         <SmallAnimatedBentoGridRight />
-      </div> */}
+      </div>
     </div>
   );
 };
@@ -20,7 +20,7 @@ const WidedAnimatedBentoGrid = () => {
       <div className="absolute inset-0 bg-[radial-gradient(#ffffff18_1px,_transparent_1px)] [background-size:20px_20px]" />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#02000F] rounded-[25px]" />
 
-      <div className="relative z-10 h-full flex items-center p-8">
+      <div className="relative z-10 h-full flex items-center justify-evenly gap-[25px] p-8 overflow-hidden">
         <div className="w-1/2 flex flex-col items-start gap-6">
           <span className="flex items-center justify-center text-center bg-[#3d3c437f] px-4 py-2 rounded-full backdrop-blur-sm border border-[#c0c0c01d]">
             <Image
@@ -45,7 +45,16 @@ const WidedAnimatedBentoGrid = () => {
             </p>
           </div>
         </div>
+        <WidedAnimatedPopUp />
       </div>
+    </div>
+  );
+};
+
+const WidedAnimatedPopUp = () => {
+  return (
+    <div className="flex items-center justify-center w-[385px] h-[207px] rounded-t-[10px] bg-gradient-to-b from-[#ffffff75] to-[#1C1B24] opacity-50 relative top-[40px]">
+      <div className="flex items-center w-[380px] h-[202px] rounded-t-[10px] bg-gradient-to-b from-[#1C1B24] to-[#0B0A14]"></div>
     </div>
   );
 };
