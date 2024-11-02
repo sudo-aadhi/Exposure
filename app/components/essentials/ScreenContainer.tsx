@@ -1,5 +1,5 @@
 "use client";
-
+import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 
@@ -24,7 +24,7 @@ const ScreenContainer: React.FC = () => {
   };
 
   return (
-    <div
+    <motion.div
       className={`
         flex flex-col items-center justify-evenly
         w-[${containerDims.width}px] h-[${containerDims.height}px]
@@ -32,6 +32,18 @@ const ScreenContainer: React.FC = () => {
         backdrop-filter backdrop-blur-2xl bg-opacity-10
         z-10 absolute top-[550px]
       `}
+      initial={{
+        opacity: 0,
+        y: 10,
+      }}
+      animate={{
+        opacity: 1,
+        y: 0,
+      }}
+      transition={{
+        duration: 2,
+        ease: "easeInOut",
+      }}
     >
       {/* Top border with gradient */}
       <div
@@ -67,7 +79,7 @@ const ScreenContainer: React.FC = () => {
         opacity-50
       `}
       ></div>
-    </div>
+    </motion.div>
   );
 };
 

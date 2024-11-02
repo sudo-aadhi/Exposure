@@ -1,3 +1,5 @@
+"use client";
+import { delay, motion } from "framer-motion";
 import React from "react";
 
 interface LayerProps {
@@ -6,7 +8,20 @@ interface LayerProps {
 }
 
 const Layer: React.FC<LayerProps> = ({ shadowSize, shadowColor }) => (
-  <div className="absolute w-full h-full flex items-center justify-center">
+  <motion.div
+    className="absolute w-full h-full flex items-center justify-center blur-lg"
+    initial={{
+      opacity: 0,
+    }}
+    animate={{
+      opacity: 1,
+    }}
+    transition={{
+      duration: 2,
+      delay: 0.87,
+      ease: "easeInOut",
+    }}
+  >
     <div
       className="absolute w-full h-full rounded-full"
       style={{
@@ -23,7 +38,7 @@ const Layer: React.FC<LayerProps> = ({ shadowSize, shadowColor }) => (
         opacity: 1,
       }}
     />
-  </div>
+  </motion.div>
 );
 
 const GlowBackgroundContainer: React.FC = () => {
@@ -34,7 +49,7 @@ const GlowBackgroundContainer: React.FC = () => {
   ];
 
   return (
-    <div
+    <motion.div
       className="flex items-center justify-center w-full h-screen bg-transparent relative top-[325px]"
       style={
         {
@@ -49,7 +64,7 @@ const GlowBackgroundContainer: React.FC = () => {
           <Layer key={index} {...layer} />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
