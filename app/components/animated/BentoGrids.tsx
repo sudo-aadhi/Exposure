@@ -1,14 +1,6 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import user from "@/public/assets/user.png";
-import admin from "@/public/assets/admin.jpg";
-import {
-  MessageSquareCode,
-  CirclePlus,
-  Send,
-  Paperclip,
-  Smile,
-} from "lucide-react";
+import React from "react";
+import { MessageSquareCode } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
