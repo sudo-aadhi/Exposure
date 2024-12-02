@@ -1,7 +1,7 @@
-import github from "./public/assets/github.svg";
-import twitter from "./public/assets/twitter.svg";
-import instagram from "./public/assets/instagram.svg";
-import rightCheviot from "./public/assets/right-orange-cheviot.svg";
+import github from "@/public/assets/github.svg";
+import twitter from "@/public/assets/twitter.svg";
+import instagram from "@/public/assets/instagram.svg";
+import rightCheviot from "@/public/assets/right-orange-cheviot.svg";
 
 export const connectComponentProp = [
   {
@@ -20,11 +20,11 @@ export const connectComponentProp = [
 
 export const BadgeComponentProp = rightCheviot;
 
-import amd from "./public/assets/amd-logo.svg";
-import etsy from "./public/assets/etsy-logo.svg";
-import shopify from "./public/assets/shopify-logo.svg";
-import ebay from "./public/assets/ebay-logo.svg";
-import amazon from "./public/assets/amazon.svg";
+import amd from "@/public/assets/amd-logo.svg";
+import etsy from "@/public/assets/etsy-logo.svg";
+import shopify from "@/public/assets/shopify-logo.svg";
+import ebay from "@/public/assets/ebay-logo.svg";
+import amazon from "@/public/assets/amazon.svg";
 import linkedin from "./public/assets/linkedin-logo.svg";
 import walmart from "./public/assets/walmart-logo.svg";
 import nvidia from "./public/assets/nvidia-logo.svg";

@@ -1,14 +1,16 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import user from "@/public/assets/user.png";
+import admin from "@/public/assets/admin.jpg";
 import {
   MessageSquareCode,
-  Brain,
-  Send,
   CirclePlus,
-  Gift,
-  ImagePlay,
+  Send,
+  Paperclip,
   Smile,
 } from "lucide-react";
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 const BentoGrids = () => {
   return (
@@ -21,7 +23,7 @@ const BentoGrids = () => {
           Replicate the code and you're ready to go.
         </h3>
       </div>
-      <div className="flex w-full h-[217.78px] border border-[#1C1C1C] rounded-[12px] justify-evenly gap-[200px]">
+      <div className="flex w-full h-[217.78px] border border-[#1C1C1C] rounded-[12px] justify-evenly gap-[200px] overflow-hidden">
         <div className="flex flex-col w-[420px] h-[200px] justify-center gap-[10px]">
           <div className="flex items-center gap-[8px]">
             <MessageSquareCode />
@@ -38,7 +40,7 @@ const BentoGrids = () => {
           </div>
         </div>
         {/* The chatbox component  */}
-        <ChatBoxComponent />
+        <KeyboardComponent />
       </div>
       <div className="flex items-center justify-between w-full h-[342.06px] rounded-[12px]">
         <div className="flex items-center justify-between w-[582px] h-[342.06px] border border-[#1C1C1C] rounded-[12px]"></div>
@@ -48,48 +50,78 @@ const BentoGrids = () => {
   );
 };
 
-const ChatBoxComponent = () => {
-  const [message, setMessage] = useState("");
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true); // Mark as mounted once the component is rendered on the client
-  }, []);
-
-  if (!mounted) {
-    return null; // Return nothing until the component has mounted
-  }
-
-  const handleSend = () => {
-    console.log("Sending message:", message);
-    setMessage("");
-  };
-
+const KeyboardComponent = () => {
   return (
-    <div className="flex flex-col w-[460px] h-[200px] rounded-b-[12px] border border-[#1C1C1C] bg-black text-white overflow-hidden">
-      <div className="flex flex-col flex-grow p-4 space-y-4 overflow-y-auto">
-        <div className="flex items-start gap-3">
-          <Send size={20} className="mt-1 flex-shrink-0" />
-          <h3 className="text-[16px] font-medium">
-            Hey, can you create an animated Bento box?
-          </h3>
+    <div className="flex items-center justify-center w-[460px] h-[200px] rounded-b-[12px] bg-gradient-to-t from-white to-black text-white overflow-hidden">
+      <div className="flex flex-col items-center justify-center w-[459px] h-[200px] rounded-b-[12px] bg-black text-white overflow-hidden relative bottom-[0.5px]">
+        <div className="flex w-[450px] h-[160px] justify-center">
+          <div className="flex flex-col items-center justify-center w-[410px] h-full gap-[6px]">
+            <div className="flex justify-center items-center w-[408.5px] h-[17px] bg-gradient-to-t from-[#ffffff10] to-black overflow-hidden rounded-b-[2px]">
+              <div className="flex justify-center items-center w-[409px] h-[16px] bg-black relative bottom-[0.5px]  rounded-b-[2px]"></div>
+            </div>
+            <div className="flex items-center gap-[3px]">
+              {Array.from({ length: 14 }).map((item, idx) => {
+                return idx < 13 ? (
+                  <div className="flex items-center justify-center w-[25px] h-[25px] bg-gradient-to-t from-[#ffffff20] to-black rounded-[3px]">
+                    <div className="flex items-center justify-center w-[23.5px] h-[24px] bg-black rounded-[3px] relative bottom-[0.5px]"></div>
+                  </div>
+                ) : (
+                  <div className="flex items-center justify-center w-[45px] h-[25px] bg-gradient-to-t from-[#ffffff20] to-black rounded-[3px]">
+                    <div className="flex items-center justify-center w-[43.5px] h-[24px] bg-black rounded-[3px] relative bottom-[0.5px]"></div>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="flex items-center gap-[3px]">
+              {Array.from({ length: 14 }).map((item, idx) => {
+                return idx != 0 ? (
+                  <div className="flex items-center justify-center w-[25px] h-[25px] bg-gradient-to-t from-[#ffffff40] to-black rounded-[3px]">
+                    <div className="flex items-center justify-center w-[23.5px] h-[24px] bg-black rounded-[3px] relative bottom-[0.5px]"></div>
+                  </div>
+                ) : (
+                  <div className="flex items-center justify-center w-[45px] h-[25px] bg-gradient-to-t from-[#ffffff40] to-black rounded-[3px]">
+                    <div className="flex items-center justify-center w-[43.5px] h-[24px] bg-black rounded-[3px] relative bottom-[0.5px]"></div>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="flex items-center gap-[3px]">
+              {Array.from({ length: 11 }).map((item, idx) => {
+                return idx != 0 ? (
+                  <div className="flex items-center justify-center w-[25px] h-[25px] bg-gradient-to-t from-[#ffffff60] to-black rounded-[3px]">
+                    <div className="flex items-center justify-center w-[23.5px] h-[24px] bg-black rounded-[3px] relative bottom-[0.5px]"></div>
+                  </div>
+                ) : (
+                  <div className="flex items-center justify-center w-[61px] h-[25px] bg-gradient-to-t from-[#ffffff60] to-black rounded-[3px]">
+                    <div className="flex items-center justify-center w-[59.5px] h-[24px] bg-black rounded-[3px] relative bottom-[0.5px]"></div>
+                  </div>
+                );
+              })}
+              <div className="flex items-center justify-center w-[61px] h-[25px] bg-gradient-to-t from-[#ffffff60] to-black rounded-[3px]">
+                <div className="flex items-center justify-center w-[59.5px] h-[24px] bg-black rounded-[3px] relative bottom-[0.5px]"></div>
+              </div>
+            </div>
+            <div className="flex items-center gap-[3px]">
+              {Array.from({ length: 9 }).map((item, idx) => {
+                return idx != 4 ? (
+                  <div className="flex items-center justify-center w-[25px] h-[25px] bg-gradient-to-t from-[#fff8] to-black rounded-[3px]">
+                    <div className="flex items-center justify-center w-[23.5px] h-[24px] bg-black rounded-[3px] relative bottom-[0.5px]"></div>
+                  </div>
+                ) : (
+                  <div className="flex items-center justify-center w-[155px] h-[25px] bg-gradient-to-t from-[#fff8] to-black rounded-[3px]">
+                    <div className="flex items-center justify-center w-[153.5px] h-[24px] bg-black rounded-[3px] relative bottom-[0.5px]"></div>
+                  </div>
+                );
+              })}
+              <div className="flex items-center justify-center w-[25px] h-[25px] bg-gradient-to-t from-[#fff8] to-black rounded-[3px]">
+                <div className="flex items-center justify-center w-[23.5px] h-[24px] bg-black rounded-[3px] relative bottom-[0.5px]"></div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="flex items-start justify-end gap-3">
-          <h3 className="text-[16px] text-[#9C9C9D] text-right">
-            Of course! We'd be happy to create it for you!
-          </h3>
-          <Brain size={20} color="#6A6B6C" className="mt-1 flex-shrink-0" />
-        </div>
-      </div>
-      <div className="flex items-center justify-between border-[#1C1C1C] w-[413px] h-[35px] border ml-5 mb-5 rounded-[6px]">
-        <div className="flex items-center gap-[10px] ml-3">
-          <CirclePlus size={18} />
-          <p className="text-[#9C9C9D] text-[15px]">Message #request</p>
-        </div>
-        <div className="flex items-center gap-[5px] mr-3">
-          <Gift size={18} />
-          <ImagePlay size={18} />
-          <Smile size={18} />
+        {/* The Touchpad component  */}
+        <div className="flex items-center justify-center w-[205px] h-[35px] relative top-[2px] bg-gradient-to-b from-white to-black rounded-t-[2px]">
+          <div className="flex w-[204px] h-[34px] bg-black rounded-t-[2px]"></div>
         </div>
       </div>
     </div>
