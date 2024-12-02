@@ -54,11 +54,17 @@ const KeyboardComponent = () => {
             <div className="flex items-center gap-[3px]">
               {Array.from({ length: 14 }).map((item, idx) => {
                 return idx < 13 ? (
-                  <div className="flex items-center justify-center w-[25px] h-[25px] bg-gradient-to-t from-[#ffffff20] to-black rounded-[3px]">
+                  <div
+                    className="flex items-center justify-center w-[25px] h-[25px] bg-gradient-to-t from-[#ffffff20] to-black rounded-[3px]"
+                    key={idx}
+                  >
                     <div className="flex items-center justify-center w-[23.5px] h-[24px] bg-black rounded-[3px] relative bottom-[0.5px]"></div>
                   </div>
                 ) : (
-                  <div className="flex items-center justify-center w-[45px] h-[25px] bg-gradient-to-t from-[#ffffff20] to-black rounded-[3px]">
+                  <div
+                    className="flex items-center justify-center w-[45px] h-[25px] bg-gradient-to-t from-[#ffffff20] to-black rounded-[3px]"
+                    key={idx}
+                  >
                     <div className="flex items-center justify-center w-[43.5px] h-[24px] bg-black rounded-[3px] relative bottom-[0.5px]"></div>
                   </div>
                 );
@@ -67,11 +73,17 @@ const KeyboardComponent = () => {
             <div className="flex items-center gap-[3px]">
               {Array.from({ length: 14 }).map((item, idx) => {
                 return idx != 0 ? (
-                  <div className="flex items-center justify-center w-[25px] h-[25px] bg-gradient-to-t from-[#ffffff40] to-black rounded-[3px]">
+                  <div
+                    className="flex items-center justify-center w-[25px] h-[25px] bg-gradient-to-t from-[#ffffff40] to-black rounded-[3px]"
+                    key={idx}
+                  >
                     <div className="flex items-center justify-center w-[23.5px] h-[24px] bg-black rounded-[3px] relative bottom-[0.5px]"></div>
                   </div>
                 ) : (
-                  <div className="flex items-center justify-center w-[45px] h-[25px] bg-gradient-to-t from-[#ffffff40] to-black rounded-[3px]">
+                  <div
+                    className="flex items-center justify-center w-[45px] h-[25px] bg-gradient-to-t from-[#ffffff40] to-black rounded-[3px]"
+                    key={idx}
+                  >
                     <div className="flex items-center justify-center w-[43.5px] h-[24px] bg-black rounded-[3px] relative bottom-[0.5px]"></div>
                   </div>
                 );
@@ -80,11 +92,17 @@ const KeyboardComponent = () => {
             <div className="flex items-center gap-[3px]">
               {Array.from({ length: 11 }).map((item, idx) => {
                 return idx != 0 ? (
-                  <div className="flex items-center justify-center w-[25px] h-[25px] bg-gradient-to-t from-[#ffffff60] to-black rounded-[3px]">
+                  <div
+                    className="flex items-center justify-center w-[25px] h-[25px] bg-gradient-to-t from-[#ffffff60] to-black rounded-[3px]"
+                    key={idx}
+                  >
                     <div className="flex items-center justify-center w-[23.5px] h-[24px] bg-black rounded-[3px] relative bottom-[0.5px]"></div>
                   </div>
                 ) : (
-                  <div className="flex items-center justify-center w-[61px] h-[25px] bg-gradient-to-t from-[#ffffff60] to-black rounded-[3px]">
+                  <div
+                    className="flex items-center justify-center w-[61px] h-[25px] bg-gradient-to-t from-[#ffffff60] to-black rounded-[3px]"
+                    key={idx}
+                  >
                     <div className="flex items-center justify-center w-[59.5px] h-[24px] bg-black rounded-[3px] relative bottom-[0.5px]"></div>
                   </div>
                 );
@@ -96,11 +114,17 @@ const KeyboardComponent = () => {
             <div className="flex items-center gap-[3px]">
               {Array.from({ length: 9 }).map((item, idx) => {
                 return idx != 4 ? (
-                  <div className="flex items-center justify-center w-[25px] h-[25px] bg-gradient-to-t from-[#fff8] to-black rounded-[3px]">
+                  <div
+                    className="flex items-center justify-center w-[25px] h-[25px] bg-gradient-to-t from-[#fff8] to-black rounded-[3px]"
+                    key={idx}
+                  >
                     <div className="flex items-center justify-center w-[23.5px] h-[24px] bg-black rounded-[3px] relative bottom-[0.5px]"></div>
                   </div>
                 ) : (
-                  <div className="flex items-center justify-center w-[155px] h-[25px] bg-gradient-to-t from-[#fff8] to-black rounded-[3px]">
+                  <div
+                    className="flex items-center justify-center w-[155px] h-[25px] bg-gradient-to-t from-[#fff8] to-black rounded-[3px]"
+                    key={idx}
+                  >
                     <div className="flex items-center justify-center w-[153.5px] h-[24px] bg-black rounded-[3px] relative bottom-[0.5px]"></div>
                   </div>
                 );
