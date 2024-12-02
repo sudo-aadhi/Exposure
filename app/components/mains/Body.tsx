@@ -7,6 +7,7 @@ import AnimatedTextBlur from "@/app/components/animated/AnimatedTextBlur"; // Im
 import FallingMeteorsBackground from "@/app/components/animated/FallingMeteors"; // Importing falling meteors animation
 import MovingBrands from "@/app/components/animated/ScrollToRevealBrands"; // Importing animated moving brands effect
 import ScrollToRevealText from "@/app/components/animated/AnimatedTextBlur"; // Importing scroll-triggered text reveal effect
+import ExplosiveText from "../animated/ExposiveText";
 const rightChevion = BadgeComponentProp; // Storing badge component properties for the chevron icon
 
 const Body = () => {
@@ -31,11 +32,7 @@ const Body = () => {
       {/* Animated moving brands */}
       {/* <MovingBrands /> */}
       <MovingBrands />
-      {/* Scroll-triggered text reveal with primary and secondary text */}
-      <ScrollToRevealText
-        primary="Everything that requires to be" // Primary message for the scroll reveal
-        secondary="professional is here, and even more." // Secondary message for the scroll reveal
-      />
+      <ExplosiveText />
     </div>
   );
 };
