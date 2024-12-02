@@ -1,5 +1,5 @@
 "use client";
-import { once } from "events";
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
@@ -136,16 +136,17 @@ const AnimatedRevealEffect: React.FC<AnimatedRevealProps> = ({
               y: 5,
               filter: "blur(3px)",
             }}
-            animate={{
+            whileInView={{
               opacity: 1,
               y: 0,
               filter: "blur(0px)",
             }}
             transition={{
-              duration: 1, // Increased duration for smoother effect
+              duration: 1, // Smooth fade
               delay: 0.12 * idx,
-              ease: [0.25, 0.1, 0.25, 1], // Custom cubic-bezier easing
+              ease: [0.25, 0.1, 0.25, 1],
             }}
+            viewport={{ once: true }}
           >
             {word}
           </motion.h2>
@@ -162,7 +163,7 @@ const AnimatedRevealEffect: React.FC<AnimatedRevealProps> = ({
               boxShadow: "0 0 3px rgba(255, 255, 255, 0.7)",
               filter: "blur(40px)",
             }}
-            animate={{
+            whileInView={{
               opacity: 1,
               y: 0,
               boxShadow: "0 0 0px rgba(255, 255, 255, 0.0)",
@@ -173,6 +174,7 @@ const AnimatedRevealEffect: React.FC<AnimatedRevealProps> = ({
               delay: 0.2 * idx,
               ease: "easeInOut",
             }}
+            viewport={{ once: true }}
           >
             <h2
               className={`font-inter font-thin text-[23px] text-white cursor-pointer transition-all duration-500 ease-in-out ${
@@ -215,29 +217,26 @@ const AnimatedPreview = ({ previewIndex }: { previewIndex: number }) => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 2, // Smooth fade-in over 1.5 seconds
-        delay: 1.7, // Add a slight delay for timing alignment
-        ease: [0.22, 0.61, 0.36, 1], // Cubic-bezier easing for fluid motion
+        duration: 2,
+        delay: 1.2,
+        ease: [0.22, 0.61, 0.36, 1],
       },
     },
   };
   return (
     <motion.div
-      className="flex items-center justify-center w-[537px] h-[512px] rounded-[16px] bg-gradient-to-b from-[#45151d] to-transparent overflow-hidden"
+      className="flex items-center justify-center w-[480px] h-[360px]"
       variants={FadeInOpacityPreviewVariants}
       initial="initial"
       whileInView="animate"
-      viewport={{ once: true }}
     >
-      <div className="flex items-center justify-center w-[536px] h-[511.5px] rounded-[16px] bg-black relative top-[0.3px]">
-        <Image
-          src={animatedProp[previewIndex].ref}
-          alt={`Preview of ${animatedProp[previewIndex].node}`}
-          width={537}
-          height={512}
-          draggable="false"
-        />
-      </div>
+      <Image
+        src={animatedProp[previewIndex].ref}
+        alt={animatedProp[previewIndex].node}
+        className="rounded-xl shadow-lg"
+        width={480}
+        height={360}
+      />
     </motion.div>
   );
 };

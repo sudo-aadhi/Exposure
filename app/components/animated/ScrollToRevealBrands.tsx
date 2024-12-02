@@ -38,7 +38,7 @@ const ScrollToRevealBrand = () => {
     >
       {/* Header text with fade-in and blur-clear animation */}
       <motion.h2
-        className="text-center text-[15px] text-[#666666]"
+        className="text-center text-[17px] text-[#666666]"
         initial={{
           opacity: 0, // Text starts fully transparent
           filter: "blur(15px)", // Apply an initial blur effect
