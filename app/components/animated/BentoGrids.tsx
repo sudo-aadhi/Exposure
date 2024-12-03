@@ -1,9 +1,8 @@
 "use client";
 import React, { useCallback, useState } from "react";
 import { MessageSquareCode } from "lucide-react";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import MacBookKeyboard from "./MacBookKeyboard";
+import MacBookKeyboard from "@/app/components/animated/MacBookKeyboard";
+import Hotkeys from "@/app/components/animated/Hotkeys";
 
 const BentoGrids = () => {
   return (
@@ -37,7 +36,9 @@ const BentoGrids = () => {
       </div>
       <div className="flex items-center justify-between w-full h-[342.06px] rounded-[12px]">
         <div className="flex items-center justify-between w-[582px] h-[342.06px] border border-[#1C1C1C] rounded-[12px]"></div>
-        <div className="flex items-center justify-between w-[582px] h-[342.06px] border border-[#1C1C1C] rounded-[12px]"></div>
+        <div className="flex items-center justify-center w-[582px] h-[342.06px] border border-[#1C1C1C] rounded-[12px]">
+          <Hotkeys />
+        </div>
       </div>
     </div>
   );
