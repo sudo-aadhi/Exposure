@@ -229,6 +229,7 @@ const AnimatedPreview = ({ previewIndex }: { previewIndex: number }) => {
       variants={FadeInOpacityPreviewVariants}
       initial="initial"
       whileInView="animate"
+      viewport={{ once: true }}
     >
       <Image
         src={animatedProp[previewIndex].ref}
