@@ -9,6 +9,8 @@ import MovingBrands from "@/app/components/animated/ScrollToRevealBrands"; // Im
 import ScrollToRevealText from "@/app/components/animated/AnimatedTextBlur"; // Importing scroll-triggered text reveal effect
 import ExplosiveText from "../animated/ExposiveText";
 import BentoGrids from "../animated/BentoGrids";
+import Motherboard from "../animated/Motherboard";
+import Pricing from "../animated/Pricing";
 const rightChevion = BadgeComponentProp; // Storing badge component properties for the chevron icon
 
 const Body = () => {
@@ -34,7 +36,6 @@ const Body = () => {
       {/* <MovingBrands /> */}
       <MovingBrands />
       <ExplosiveText />
-      <BentoGrids />
     </div>
   );
 };
