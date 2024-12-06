@@ -6,11 +6,8 @@ import HeroDisplay from "@/app/components/layouts/HeroDisplay"; // Importing Her
 import AnimatedTextBlur from "@/app/components/animated/AnimatedTextBlur"; // Importing animated text blur effect
 import FallingMeteorsBackground from "@/app/components/animated/FallingMeteors"; // Importing falling meteors animation
 import MovingBrands from "@/app/components/animated/ScrollToRevealBrands"; // Importing animated moving brands effect
-import ScrollToRevealText from "@/app/components/animated/AnimatedTextBlur"; // Importing scroll-triggered text reveal effect
-import ExplosiveText from "../animated/ExposiveText";
-import BentoGrids from "../animated/BentoGrids";
-import Motherboard from "../animated/Motherboard";
-import Pricing from "../animated/Pricing";
+import ExplosiveText from "@/app/components/animated/ExposiveText";
+import BentoGrid from "@/app/components/layouts/BentoGrid";
 const rightChevion = BadgeComponentProp; // Storing badge component properties for the chevron icon
 
 const Body = () => {
@@ -36,6 +33,7 @@ const Body = () => {
       {/* <MovingBrands /> */}
       <MovingBrands />
       <ExplosiveText />
+      <BentoGrid />
     </div>
   );
 };
