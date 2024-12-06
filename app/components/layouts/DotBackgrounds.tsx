@@ -33,7 +33,7 @@ const DotBackground: React.FC<DotBackgroundProps> = ({
           backgroundSize: `${dotSpacing}px ${dotSpacing}px`,
           mask: "radial-gradient(circle at center, black, transparent 80%)",
           WebkitMask:
-            "radial-gradient(circle at center, black, transparent 80%)",
+            "radial-gradient(circle at center, black, transparent 120%)",
         }}
       />
       {children && (

@@ -17,5 +17,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@nauverse/tailwind-dot-grid-backgrounds")],
 } satisfies Config;

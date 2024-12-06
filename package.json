@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nauverse/tailwind-dot-grid-backgrounds": "^1.2.13",
     "framer-motion": "^11.12.0",
     "lucide-react": "^0.462.0",
     "next": "15.0.3",
