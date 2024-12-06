@@ -9,7 +9,7 @@ interface DotBackgroundProps {
   dotSpacing?: number;
   dotOpacity?: number;
   borderRadius?: number;
-  children?: React.ReactNode;
+  children?: any;
 }
 
 const DotBackground: React.FC<DotBackgroundProps> = ({
