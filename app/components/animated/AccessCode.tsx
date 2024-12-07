@@ -16,6 +16,7 @@ import {
   Type,
   Bug,
 } from "lucide-react";
+import BentoCodePreview from "@/app/components/animated/BentoCodePreview";
 
 const AccessCode = () => {
   return (
@@ -76,13 +77,14 @@ const AccessCodeChild = () => {
 const AnimatedAccessCodeComponent = () => {
   return (
     <div
-      className="flex items-center justify-center w-[450px] h-[250px] bg-gradient-to-r from-black via-[#FFBB00] to-transparent rounded-t-[20px] border border-[#ffffff1f] relative top-[25px] right-[35px]"
+      className="flex items-center justify-center w-[450px] h-[250px] bg-gradient-to-r from-black via-[#FFBB00] to-transparent rounded-t-[20px] border border-[#ffffff1f] relative top-[25px] right-[35px] shadow-md"
       style={{
         boxShadow: "rgba(255, 187, 0, 0.2) 0px 0px 317px 5px", // Golden glow effect
       }}
     >
       <div className="flex items-center justify-start w-[450px] h-[249px] bg-black rounded-t-[20px] relative top-[1px] bg-grid-4-s-2-neutral-950">
-        <div className="flex items-center justify-center w-[25px] h-full rounded-tl-[20px] bg-gradient-to-b from-[#4b4b4b] to-transparent relative left-[0.6px]">
+        {/* The container containing icons  */}
+        <div className="flex items-center justify-center w-[25px] h-full rounded-tl-[20px] bg-gradient-to-b from-[#282828] to-transparent relative left-[0.6px]">
           <div className="flex flex-col items-center justify-center w-[24.5px] h-full rounded-tl-[20px] bg-gradient-to-b from-[#0d0d0d] to-black relative right-[0.4px] gap-[10px]">
             <Crosshair size={10} color="#4b4b4b" />
             <TextCursor size={10} color="#4b4b4b" />
@@ -96,6 +98,11 @@ const AnimatedAccessCodeComponent = () => {
             <Type size={10} color="#252525" />
             <Bug size={10} color="#1F1F1F" />
           </div>
+        </div>
+        {/* The window container which has the code and the preview component  */}
+        <div className="flex w-full h-full rounded-tr-[20px]">
+          {/* The code component  */}
+          <BentoCodePreview />
         </div>
       </div>
     </div>
