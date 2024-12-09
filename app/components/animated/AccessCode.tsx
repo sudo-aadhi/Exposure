@@ -17,22 +17,36 @@ import {
   Bug,
 } from "lucide-react";
 import BentoCodePreview from "@/app/components/animated/BentoCodePreview";
+import Button from "../layouts/Button";
+import { motion } from "framer-motion";
 
 const AccessCode = () => {
   return (
-    <div className="flex items-center justify-center w-[1195px] h-[280px] bg-gradient-to-b from-[#716B6A] to-[#121212] rounded-[27px]">
-      <div className="flex items-center justify-center w-[1192px] h-[277px] bg-black rounded-[27px]">
-        <DotBackground
-          width="1192"
-          height="275"
-          dotOpacity={0.2}
-          dotSize={0.7}
-          dotSpacing={12}
-          borderRadius={27}
-        >
-          <AccessCodeChild />
-          <AnimatedAccessCodeComponent />
-        </DotBackground>
+    <div className="flex items-center flex-col">
+      <div
+        className="top-[70px] opacity-50"
+        style={{
+          width: "500px",
+          height: "50px",
+          backgroundColor: "#DCA91F",
+          position: "absolute",
+          boxShadow: "0 0 800px 40px #DCA91F",
+        }}
+      ></div>
+      <div className="flex items-center justify-center w-[1195px] h-[280px] bg-gradient-to-b from-[#2e2e2e] to-[#121212] rounded-[27px] z-20 shadow-lg">
+        <div className="flex items-center justify-center w-[1192px] h-[277px] bg-black rounded-[27px]">
+          <DotBackground
+            width="1192"
+            height="275"
+            dotOpacity={0.2}
+            dotSize={0.7}
+            dotSpacing={12}
+            borderRadius={27}
+          >
+            <AccessCodeChild />
+            <AnimatedAccessCodeComponent />
+          </DotBackground>
+        </div>
       </div>
     </div>
   );
@@ -76,10 +90,22 @@ const AccessCodeChild = () => {
 
 const AnimatedAccessCodeComponent = () => {
   return (
-    <div
+    <motion.div
       className="flex items-center justify-center w-[450px] h-[250px] bg-gradient-to-r from-black via-[#FFBB00] to-transparent rounded-t-[20px] border border-[#ffffff1f] relative top-[25px] right-[35px] shadow-md"
       style={{
         boxShadow: "rgba(255, 187, 0, 0.2) 0px 0px 317px 5px", // Golden glow effect
+      }}
+      initial={{
+        top: 85,
+        opacity: 0,
+      }}
+      animate={{
+        top: 25,
+        opacity: 1,
+      }}
+      transition={{
+        ease: "easeInOut",
+        duration: 1.5,
       }}
     >
       <div className="flex items-center justify-start w-[450px] h-[249px] bg-black rounded-t-[20px] relative top-[1px] bg-grid-4-s-2-neutral-950">
@@ -103,9 +129,12 @@ const AnimatedAccessCodeComponent = () => {
         <div className="flex w-full h-full rounded-tr-[20px]">
           {/* The code component  */}
           <BentoCodePreview />
+          <div className="flex items-center justify-center overflow-hidden w-[173px] h-full bg-gradient-to-b from-transparent via-[#505050] to-transparent rounded-tr-[20px]">
+            <div className="flex items-center justify-center overflow-hidden w-[173px] h-full bg-black rounded-tr-[20px] relative left-[1px]"></div>
+          </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
