@@ -8,7 +8,7 @@ import { motion } from "framer-motion"; // Importing motion from Framer Motion t
 const HeroDisplay = () => {
   return (
     <motion.div
-      className="flex items-center justify-center w-[1203px] h-[780px] bg-gray-50 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-[#303030] rounded-[14px] relative top-[100px]"
+      className="flex items-center justify-center w-[1203px] h-[780px] bg-gray-50 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-[#303030] rounded-[14px] relative top-[100px] shadow-2xl"
       initial={{
         opacity: 0, // Initial state for opacity: completely transparent
         y: 25, // Initial vertical position: slightly below its final position
@@ -23,8 +23,18 @@ const HeroDisplay = () => {
         ease: "easeInOut", // Smooth easing function for the animation
       }}
     >
+      <div
+        className="top-[95px] opacity-50 rounded-[50px]"
+        style={{
+          width: "850px",
+          height: "630px",
+          backgroundColor: "#DCA91F",
+          position: "absolute",
+          boxShadow: "0 0 1000px 50px #F35D21",
+        }}
+      ></div>
       {/* This is the main container for the hero display */}
-      <div className="flex items-center w-[1175px] h-[758px] bg-[#070707] bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-80 border border-[#303030] rounded-[13px]">
+      <div className="flex items-center w-[1175px] h-[758px] bg-[#000000] bg-clip-padding backdrop-filter backdrop-blur-sm border border-[#303030] rounded-[13px]">
         {/* Inner container that holds the background image with optimized rendering */}
         <Image
           src={heroBackground} // Source of the background image
