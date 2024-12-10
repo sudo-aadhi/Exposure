@@ -1,4 +1,5 @@
 import React from "react";
+import DotBackground from "../layouts/DotBackgrounds";
 
 const MaximizeCode = () => {
   return (
@@ -14,7 +15,16 @@ const MaximizeCode = () => {
             boxShadow: "0 0 800px 55px #6A4CFF",
           }}
         ></div>
-        <div className="flex justify-center items-center w-[582px] h-[352px] bg-black rounded-[27px]"></div>
+        <div className="flex justify-center items-center w-[582px] h-[352px] bg-black rounded-[27px]">
+          <DotBackground
+            width="1192"
+            height="275"
+            dotOpacity={0.2}
+            dotSize={0.7}
+            dotSpacing={12}
+            borderRadius={27}
+          ></DotBackground>
+        </div>
       </div>
     </div>
   );

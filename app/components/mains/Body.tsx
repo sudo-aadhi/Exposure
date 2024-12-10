@@ -3,11 +3,12 @@ import Badge from "@/app/components/layouts/Badge"; // Importing Badge component
 import { BadgeComponentProp } from "@/config"; // Importing configuration for badge properties
 import Hero from "@/app/components/layouts/Hero"; // Importing Hero section component
 import HeroDisplay from "@/app/components/layouts/HeroDisplay"; // Importing HeroDisplay section component
-import AnimatedTextBlur from "@/app/components/animated/AnimatedTextBlur"; // Importing animated text blur effect
 import FallingMeteorsBackground from "@/app/components/animated/FallingMeteors"; // Importing falling meteors animation
 import MovingBrands from "@/app/components/animated/ScrollToRevealBrands"; // Importing animated moving brands effect
 import ExplosiveText from "@/app/components/animated/ExposiveText";
 import BentoGrid from "@/app/components/layouts/BentoGrid";
+import AnimatedTestimonials from "@/app/components/animated/AnimatedTestimonials";
+import AnimatedChipset from "../animated/AnimatedChipset";
 const rightChevion = BadgeComponentProp; // Storing badge component properties for the chevron icon
 
 const Body = () => {
@@ -34,6 +35,7 @@ const Body = () => {
       <MovingBrands />
       <ExplosiveText />
       <BentoGrid />
+      <AnimatedChipset />
     </div>
   );
 };
