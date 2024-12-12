@@ -18,20 +18,13 @@
 import { motion } from "framer-motion"; // Import for Framer Motion animations (although not directly used here)
 import React from "react"; // React import for functional components
 
-// Prop interface for the AnimatedBentoBackground component
-interface AnimatedBentoBackgroundProp {
-  children: React.ReactNode; // Allows children to be passed inside the background component
-}
-
 /**
  * AnimatedBentoBackground Component
  *
  * Renders an animated background composed of multiple meteor beams.
  * Each meteor beam is generated within a container and animated.
  */
-const AnimatedBentoBackground: React.FC<AnimatedBentoBackgroundProp> = ({
-  children,
-}) => {
+const AnimatedBentoBackground = ({}) => {
   return (
     // Container for the animated background, with flexible width and height
     <div className="flex items-center w-full h-[315px] overflow-hidden">
