@@ -29,7 +29,7 @@ type BadgeProps = {
   text: string; // The text displayed inside the badge
   vectorImage: any; // Optional vector image displayed alongside the text
   vectorWidth: number; // Width of the vector image (in pixels)
-  position: any; // The vertical position of the badge (used for absolute positioning)
+  position: number | string; // The vertical position of the badge (used for absolute positioning)
 };
 
 const Badge: React.FC<BadgeProps> = ({
@@ -44,7 +44,7 @@ const Badge: React.FC<BadgeProps> = ({
       className="flex items-center justify-center w-[262px] h-[32px] bg-gradient-to-b from-[#0C0C0E] to-[#18181b] absolute border border-[#212122] rounded-full gap-[10px]"
       style={{
         // Dynamically set the vertical position based on the `position` prop
-        top: `${position}px`,
+        top: typeof position === "number" ? `${position}px` : position,
       }}
     >
       {/* Render the text inside the badge */}

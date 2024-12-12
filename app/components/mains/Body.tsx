@@ -14,6 +14,7 @@ const Body = () => {
         text="Announcing our new website"
         vectorImage={rightChevion}
         vectorWidth={11}
+        position={0} // Add this line with an appropriate value
       />
       <FallingMeteorsBackground />
       <Hero />
