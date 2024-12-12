@@ -5,37 +5,20 @@ import Hero from "@/app/components/layouts/Hero"; // Importing Hero section comp
 import HeroDisplay from "@/app/components/layouts/HeroDisplay"; // Importing HeroDisplay section component
 import FallingMeteorsBackground from "@/app/components/animated/FallingMeteors"; // Importing falling meteors animation
 import MovingBrands from "@/app/components/animated/ScrollToRevealBrands"; // Importing animated moving brands effect
-import ExplosiveText from "@/app/components/animated/ExposiveText";
-import BentoGrid from "@/app/components/layouts/BentoGrid";
-import AnimatedTestimonials from "@/app/components/animated/AnimatedTestimonials";
-import AnimatedChipset from "../animated/AnimatedChipset";
 const rightChevion = BadgeComponentProp; // Storing badge component properties for the chevron icon
 
 const Body = () => {
   return (
     <div className="flex flex-col items-center w-full h-full relative top-[100px]">
-      {/* Badge component displaying a notification message */}
       <Badge
-        text="Announcing our new website" // The main message for the badge
-        vectorImage={rightChevion} // The chevron vector image for the badge
-        vectorWidth={11} // Setting the width of the chevron icon
+        text="Announcing our new website"
+        vectorImage={rightChevion}
+        vectorWidth={11}
       />
-
-      {/* Animated background of falling meteors */}
       <FallingMeteorsBackground />
-
-      {/* Hero section showcasing main content */}
       <Hero />
-
-      {/* Hero display section for background image */}
       <HeroDisplay />
-
-      {/* Animated moving brands */}
-      {/* <MovingBrands /> */}
       <MovingBrands />
-      <ExplosiveText />
-      <BentoGrid />
-      <AnimatedChipset />
     </div>
   );
 };

@@ -1,3 +1,21 @@
+/**
+ * HeroDisplay Component
+ *
+ * A visually striking hero section featuring a dynamic background with animation effects.
+ * This component utilizes Next.js Image optimization and Framer Motion for smooth animations.
+ *
+ * Key Features:
+ * - Animated entrance effect using Framer Motion
+ * - Glassmorphism effect with backdrop filter for modern UI aesthetics
+ * - Custom glow effect using absolute positioning and box-shadow
+ * - Optimized image loading with Next.js Image component
+ *
+ * Component Highlights:
+ * - Responsive design with precise pixel measurements for layout consistency
+ * - Utilizes client-side rendering to ensure proper functionality of animations
+ * - Implements advanced CSS techniques for visual effects
+ */
+
 "use client"; // Marking this component for client-side rendering to ensure that animations work correctly
 
 import Image from "next/image"; // Importing the Image component from Next.js for optimized image handling
@@ -23,6 +41,7 @@ const HeroDisplay = () => {
         ease: "easeInOut", // Smooth easing function for the animation
       }}
     >
+      {/* Glow effect container */}
       <div
         className="top-[95px] opacity-50 rounded-[50px]"
         style={{
@@ -33,9 +52,9 @@ const HeroDisplay = () => {
           boxShadow: "0 0 1000px 50px #F35D21",
         }}
       ></div>
-      {/* This is the main container for the hero display */}
+      {/* Main container for the hero display */}
       <div className="flex items-center w-[1175px] h-[758px] bg-[#000000] bg-clip-padding backdrop-filter backdrop-blur-sm border border-[#303030] rounded-[13px]">
-        {/* Inner container that holds the background image with optimized rendering */}
+        {/* Background image container with optimized rendering */}
         <Image
           src={heroBackground} // Source of the background image
           alt="hero-background" // Accessibility text for the image

@@ -1,9 +1,3 @@
-"use client"; // Ensure this component is rendered on the client side
-import React, { useRef } from "react";
-import { MovingBrandProp } from "@/config"; // Import the list of brand properties
-import Image from "next/image";
-import { motion, useInView } from "framer-motion";
-
 /**
  * ScrollToRevealBrand Component
  *
@@ -20,6 +14,12 @@ import { motion, useInView } from "framer-motion";
  * - Integrates Next.js's Image for optimized asset handling.
  * - Provides flexibility to display any number of brands with staggered animations.
  */
+
+"use client"; // Ensure this component is rendered on the client side
+import React, { useRef } from "react";
+import { MovingBrandProp } from "@/config"; // Import the list of brand properties
+import Image from "next/image";
+import { motion, useInView } from "framer-motion";
 
 const ScrollToRevealBrand = () => {
   // Reference to the container element to track its visibility in the viewport

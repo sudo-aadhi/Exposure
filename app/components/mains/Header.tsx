@@ -1,3 +1,25 @@
+/**
+ * Header Component
+ *
+ * A responsive and interactive header component for a web application.
+ * Features navigation buttons and social media connection icons.
+ *
+ * Key Features:
+ * - Responsive layout with flexbox
+ * - Interactive buttons with hover effects using Framer Motion
+ * - Dynamic rendering of connection icons from configuration
+ * - Optimized image loading with Next.js Image component
+ *
+ * Component Structure:
+ * - Main Header container
+ *   - Left section: Navigation buttons (Home, Components, Pricing)
+ *   - Right section: Connection icons
+ *
+ * Performance Considerations:
+ * - Uses client-side rendering for interactive elements
+ * - Optimized image loading for connection icons
+ */
+
 "use client";
 import { motion } from "framer-motion"; // Importing Framer Motion for animations
 import React from "react";
@@ -24,7 +46,12 @@ const Header = () => {
   );
 };
 
-// Home button with hover animation for opacity change
+/**
+ * HomeButton Component
+ *
+ * Interactive button for the Home navigation item.
+ * Features a hover animation for opacity change.
+ */
 const HomeButton = () => {
   return (
     <div className="flex justify-center items-center w-[92px] h-[36px] rounded-full cursor-pointer shadow-md border border-[#303032] bg-gradient-to-b from-[#0a0a0b] to-[#24242a]">
@@ -44,7 +71,11 @@ const HomeButton = () => {
   );
 };
 
-// Components button for navigation
+/**
+ * ComponentsButton Component
+ *
+ * Button for the Components navigation item.
+ */
 const ComponentsButton = () => {
   return (
     <div className="flex justify-center items-center w-[133px] h-[36px] border border-[#303032] bg-gradient-to-b from-[#0a0a0b] to-[#24242a] rounded-full cursor-pointer shadow-md">
@@ -53,7 +84,11 @@ const ComponentsButton = () => {
   );
 };
 
-// Pricing button for navigation
+/**
+ * PricingButton Component
+ *
+ * Button for the Pricing navigation item.
+ */
 const PricingButton = () => {
   return (
     <div className="flex justify-center items-center w-[92px] h-[36px] border border-[#303032] bg-gradient-to-b from-[#0a0a0b] to-[#24242a] rounded-full cursor-pointer shadow-md">
@@ -62,7 +97,14 @@ const PricingButton = () => {
   );
 };
 
-// ConnectComponent for displaying social media or other connection icons
+/**
+ * ConnectComponent
+ *
+ * Renders a connection icon (e.g., social media) with optimized image loading.
+ *
+ * @param {Object} props - Component props
+ * @param {string} props.svg - The SVG image source for the icon
+ */
 const ConnectComponent = ({ svg }: { svg?: any }) => {
   return (
     <div className="flex items-center justify-center w-[36px] h-full rounded-md border border-[#303032] bg-gradient-to-b from-[#0a0a0b] to-[#24242a]">

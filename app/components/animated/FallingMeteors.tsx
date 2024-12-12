@@ -1,8 +1,3 @@
-"use client"; // Ensure this component is rendered client-side
-
-import { motion } from "framer-motion";
-import React, { useState, useEffect, useMemo, useCallback } from "react";
-
 /**
  * FallingMeteorsBackground Component
  *
@@ -19,6 +14,10 @@ import React, { useState, useEffect, useMemo, useCallback } from "react";
  * - Utilizes Framer Motion for precise animation control and fluidity.
  * - Lightweight implementation designed for high performance.
  */
+
+"use client"; // Ensure this component is rendered client-side
+import { motion } from "framer-motion";
+import React, { useState, useEffect, useMemo, useCallback } from "react";
 
 const FallingMeteorsBackground: React.FC = React.memo(() => {
   /**
