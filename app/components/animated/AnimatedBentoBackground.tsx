@@ -34,7 +34,6 @@ const AnimatedBentoBackground = ({}) => {
           width={133.33} // Fixed width for each meteor beam
           duration={4} // Duration for the animation of meteor beams
           delay={4} // Delay for staggered animation of meteor beams
-          gradient={"#000"} // Background color for meteor beams
           key={idx} // Unique key for each meteor beam
         />
       ))}
