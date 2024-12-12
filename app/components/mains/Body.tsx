@@ -5,6 +5,7 @@ import Hero from "@/app/components/layouts/Hero"; // Importing Hero section comp
 import HeroDisplay from "@/app/components/layouts/HeroDisplay"; // Importing HeroDisplay section component
 import FallingMeteorsBackground from "@/app/components/animated/FallingMeteors"; // Importing falling meteors animation
 import MovingBrands from "@/app/components/animated/ScrollToRevealBrands"; // Importing animated moving brands effect
+import BentoBackground from "../layouts/BentoBackground";
 const rightChevion = BadgeComponentProp; // Storing badge component properties for the chevron icon
 
 const Body = () => {
@@ -20,6 +21,7 @@ const Body = () => {
       <Hero />
       <HeroDisplay />
       <MovingBrands />
+      <BentoBackground />
     </div>
   );
 };
