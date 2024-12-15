@@ -50,7 +50,7 @@ const FallingMeteorsBackground: React.FC = React.memo(() => {
         {Array.from({ length: 17 }).map((_, idx) => (
           <div
             key={idx}
-            className={`flex w-[2px] h-full bg-gradient-to-t from-[#ff3c00] via-[#ff3c001d] to-[#000000] rotate-[-45deg]`}
+            className={`flex w-[2px] h-full bg-gradient-to-t from-[#C567FF] via-[#100018] to-[#000000] rotate-[-45deg]`}
           ></div>
         ))}
       </div>
@@ -68,7 +68,7 @@ const FallingMeteorsBackground: React.FC = React.memo(() => {
         {Array.from({ length: 17 }).map((_, idx) => (
           <div
             key={idx}
-            className="relative flex w-[2px] h-full bg-gradient-to-t from-[#ff3c00ac] via-[#ff3c001d] to-[#000000] rotate-[45deg] overflow-hidden"
+            className="relative flex w-[2px] h-full bg-gradient-to-t from-[#0BA1FF] via-[#100018] to-[#000000] rotate-[45deg] overflow-hidden"
           >
             {animatedLines.has(idx) && (
               <motion.div
@@ -82,8 +82,8 @@ const FallingMeteorsBackground: React.FC = React.memo(() => {
                   ease: "linear", // Smooth, constant motion
                 }}
               >
-                <div className="w-[5px] h-[px] rounded-full bg-[#ff3c00]" />
-                <div className="w-[5px] h-[97.49px] bg-gradient-to-t from-[#ff3c00] to-[#000000]" />
+                <div className="w-[5px] h-[px] rounded-full bg-[#442358]" />
+                <div className="w-[5px] h-[97.49px] bg-gradient-to-t from-[#9D0BFF] to-[#000000]" />
               </motion.div>
             )}
           </div>

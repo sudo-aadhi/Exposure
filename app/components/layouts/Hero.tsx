@@ -70,7 +70,7 @@ const Hero = () => {
         {/* "Animated" Text with Gradient Effect */}
         <motion.div className="relative">
           <motion.h1
-            className="bg-gradient-to-b from-[#FF3D00] to-[#330C00] bg-clip-text text-transparent text-[40px] sm:text-[55px] md:text-[65px] lg:text-[75px]"
+            className="bg-gradient-to-b from-[#b13ef8] to-[#1E0230] bg-clip-text text-transparent text-[40px] sm:text-[55px] md:text-[65px] lg:text-[75px]"
             initial={{
               opacity: 0,
               y: 35,
@@ -109,10 +109,9 @@ const Hero = () => {
           <motion.h1
             className="text-transparent text-[40px] sm:text-[55px] md:text-[65px] lg:text-[75px] relative"
             style={{
-              WebkitTextStroke: "0.7px #FF480E",
-              textShadow:
-                "0 0 20px rgba(255, 72, 14, 0.3), 0 0 40px rgba(255, 72, 14, 0.2)",
-              filter: "drop-shadow(0 0 10px rgba(255, 72, 14, 0.15))",
+              WebkitTextStroke: "0.7px #C567FF",
+              textShadow: "0 0 5px #1E0230, 0 0 40px #1E0230",
+              filter: "drop-shadow(0 0 10px #)",
             }}
             initial={{
               opacity: 0,
@@ -175,8 +174,8 @@ const Hero = () => {
         }}
       >
         <Button
-          backgroundColor="FE4004"
-          toColor="EA6D49"
+          backgroundColor="AD28FF"
+          toColor="1E0230"
           width={155}
           height={42}
           text="Get started"

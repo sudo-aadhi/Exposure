@@ -21,7 +21,6 @@ const Body = () => {
       <Hero />
       <HeroDisplay />
       <MovingBrands />
-      <BentoBackground />
     </div>
   );
 };

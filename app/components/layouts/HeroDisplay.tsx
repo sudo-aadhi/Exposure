@@ -47,9 +47,9 @@ const HeroDisplay = () => {
         style={{
           width: "850px",
           height: "630px",
-          backgroundColor: "#DCA91F",
+          backgroundColor: "#C567FF",
           position: "absolute",
-          boxShadow: "0 0 1000px 50px #F35D21",
+          boxShadow: "0 0 1000px 65px #C567FF",
         }}
       ></div>
       {/* Main container for the hero display */}
