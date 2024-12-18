@@ -1,27 +1,33 @@
 "use client";
 import { motion } from "framer-motion";
 
-interface AnimatedRippleEffect {
+interface AnimatedRippleEffectProps {
   mainCircleSize?: number;
   mainCircleOpacity?: number;
   numCircles?: number;
   className?: string;
 }
 
-const AnimatedRippleEffect: React.FC<AnimatedRippleEffect> = ({
-  mainCircleSize = 90,
+const AnimatedRippleEffect: React.FC<AnimatedRippleEffectProps> = ({
+  mainCircleSize = 50,
   mainCircleOpacity = 0.24,
-  numCircles = 8,
+  numCircles = 6,
   className = "",
 }) => {
   return (
-    <div
-      className={`pointer-events-none select-none absolute inset-0 [mask-image:linear-gradient(to_bottom,white,transparent)] ${className}`}
+    <motion.div
+      className={`pointer-events-none select-none absolute inset-0 [mask-image:linear-gradient(to_bottom,white,transparent)] ${className} z-10 shadow-md`}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{
+        duration: 3,
+        ease: "easeInOut",
+      }}
     >
       {Array.from({ length: numCircles }, (_, i) => {
         const size = mainCircleSize + i * 70;
-        const opacity = mainCircleOpacity - i * 0.03;
-        const animationDelay = `${i * 0.06}s`;
+        const opacity = Math.max(mainCircleOpacity - i * 0.04, 0.1);
+        const animationDelay = i * 0.4;
         const borderStyle = i === numCircles - 1 ? "dashed" : "solid";
         const borderOpacity = 5 + i * 5;
 
@@ -32,26 +38,28 @@ const AnimatedRippleEffect: React.FC<AnimatedRippleEffect> = ({
             style={{
               width: size,
               height: size,
-              opacity,
               borderStyle,
               borderWidth: 1,
               borderColor: `hsl(var(--foreground) / ${borderOpacity}%)`,
               top: "40.5%",
               left: "50%",
-              boxShadow: "drop-shadow(0 0 15px rgba(255, 72, 14, 0.15))",
+              boxShadow: "0 0 500px 65px #C567FF",
             }}
-            initial={{ scale: 0, x: "-50%", y: "-50%" }}
-            animate={{ scale: 1 }}
+            initial={{ scale: 0, x: "-50%", y: "-50%", opacity: 0 }}
+            animate={{
+              scale: [0, 1.2, 0],
+              opacity: [0, opacity, 0],
+            }}
             transition={{
               repeat: Infinity,
-              duration: 4,
-              delay: parseFloat(animationDelay),
-              ease: "linear",
+              duration: 6,
+              delay: animationDelay,
+              ease: [0.25, 0.1, 0.25, 1],
             }}
           />
         );
       })}
-    </div>
+    </motion.div>
   );
 };
 
