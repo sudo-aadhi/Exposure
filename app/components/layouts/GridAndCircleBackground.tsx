@@ -1,67 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-
-interface AnimatedRippleEffectProps {
-  mainCircleSize?: number;
-  mainCircleOpacity?: number;
-  numCircles?: number;
-  className?: string;
-}
-
-const AnimatedRippleEffect: React.FC<AnimatedRippleEffectProps> = ({
-  mainCircleSize = 50,
-  mainCircleOpacity = 0.24,
-  numCircles = 6,
-  className = "",
-}) => {
-  return (
-    <motion.div
-      className={`pointer-events-none select-none absolute inset-0 [mask-image:linear-gradient(to_bottom,white,transparent)] ${className} z-10 shadow-md`}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{
-        duration: 3,
-        ease: "easeInOut",
-      }}
-    >
-      {Array.from({ length: numCircles }, (_, i) => {
-        const size = mainCircleSize + i * 70;
-        const opacity = Math.max(mainCircleOpacity - i * 0.04, 0.1);
-        const animationDelay = i * 0.4;
-        const borderStyle = i === numCircles - 1 ? "dashed" : "solid";
-        const borderOpacity = 5 + i * 5;
-
-        return (
-          <motion.div
-            key={i}
-            className="absolute rounded-full bg-[#AD28FF] shadow-xl border"
-            style={{
-              width: size,
-              height: size,
-              borderStyle,
-              borderWidth: 1,
-              borderColor: `hsl(var(--foreground) / ${borderOpacity}%)`,
-              top: "40.5%",
-              left: "50%",
-              boxShadow: "0 0 500px 65px #C567FF",
-            }}
-            initial={{ scale: 0, x: "-50%", y: "-50%", opacity: 0 }}
-            animate={{
-              scale: [0, 1.2, 0],
-              opacity: [0, opacity, 0],
-            }}
-            transition={{
-              repeat: Infinity,
-              duration: 6,
-              delay: animationDelay,
-              ease: [0.25, 0.1, 0.25, 1],
-            }}
-          />
-        );
-      })}
-    </motion.div>
-  );
-};
+import AnimatedRippleEffect from "@/app/components/animated/AnimatedRippleEffect";
 
 const GridAndCircleBackground = () => {
   return (
