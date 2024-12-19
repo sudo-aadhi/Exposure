@@ -6,6 +6,7 @@ import HeroDisplay from "@/app/components/layouts/HeroDisplay"; // Importing Her
 import FallingMeteorsBackground from "@/app/components/animated/FallingMeteors"; // Importing falling meteors animation
 import MovingBrands from "@/app/components/animated/ScrollToRevealBrands"; // Importing animated moving brands effect
 import Section from "../layouts/Section";
+import PurpleGlowOverlay from "../layouts/PurpleGlowOverlay";
 const rightChevion = BadgeComponentProp; // Storing badge component properties for the chevron icon
 
 const Body = () => {
@@ -21,6 +22,7 @@ const Body = () => {
       <Hero />
       <HeroDisplay />
       <MovingBrands />
+      <PurpleGlowOverlay value={1700} opacityValue={0.5} />
       <Section />
     </div>
   );
