@@ -1,3 +1,7 @@
+"use client";
+import { motion } from "framer-motion";
+import React from "react";
+
 /**
  * PurpleGlowOverlay Component
  *
@@ -14,10 +18,6 @@
  * - Supports dynamic positioning via the `value` prop, allowing flexible placement.
  * - Customizable opacity, delay, and animation settings for diverse use cases.
  */
-
-"use client";
-import { motion } from "framer-motion";
-import React from "react";
 
 /**
  * Interface for component props.
