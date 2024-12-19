@@ -22,7 +22,7 @@ const Body = () => {
       <Hero />
       <HeroDisplay />
       <MovingBrands />
-      <PurpleGlowOverlay value={1700} opacityValue={0.5} />
+      <PurpleGlowOverlay value={1700} opacityValue={0.5} delayValue={1} />
       <Section />
     </div>
   );
