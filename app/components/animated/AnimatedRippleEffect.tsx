@@ -57,7 +57,7 @@ interface AnimatedRippleEffectProps {
  * @returns {JSX.Element} A motion-enabled div containing animated ripple circles.
  */
 const AnimatedRippleEffect: React.FC<AnimatedRippleEffectProps> = ({
-  mainCircleSize = 50,
+  mainCircleSize = 30,
   mainCircleOpacity = 0.24,
   numCircles = 6,
   className = "",
@@ -65,7 +65,7 @@ const AnimatedRippleEffect: React.FC<AnimatedRippleEffectProps> = ({
   return (
     <motion.div
       // Root container for the ripple effect
-      className={`pointer-events-none select-none absolute inset-0 [mask-image:linear-gradient(to_bottom,white,transparent)] ${className} z-10 shadow-md`}
+      className={`pointer-events-none select-none absolute inset-0 [mask-image:linear-gradient(to_bottom,white,transparent)] ${className} z-50 shadow-md`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{
@@ -95,7 +95,7 @@ const AnimatedRippleEffect: React.FC<AnimatedRippleEffectProps> = ({
               borderColor: `hsl(var(--foreground) / ${borderOpacity}%)`, // Dynamic border color
               top: "40.5%", // Center alignment
               left: "50%", // Center alignment
-              boxShadow: "0 0 500px 65px #C567FF", // Glow effect
+              boxShadow: "0 0 550px 70px #C567FF", // Glow effect
             }}
             // Initial animation properties
             initial={{ scale: 0, x: "-50%", y: "-50%", opacity: 0 }}

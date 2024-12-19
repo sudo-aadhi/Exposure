@@ -1,7 +1,5 @@
 "use client";
 import React from "react";
-import sectionBackground from "@/public/assets/section/section_background.svg";
-import Image from "next/image";
 import GridAndCircleBackground from "./GridAndCircleBackground";
 import { motion } from "framer-motion";
 
@@ -9,8 +7,19 @@ const Section = () => {
   return (
     <motion.div
       className="flex flex-col items-center w-[1200px] h-[940px] relative top-[370px]"
+      initial={{
+        opacity: 0,
+      }}
       whileInView={{
         opacity: 1,
+        transition: {
+          duration: 3.5, // Slightly longer duration for a smoother effect
+          delay: 0.5,
+          ease: [0.25, 0.8, 0.25, 1], // Custom cubic-bezier easing for a smoother transition
+        },
+      }}
+      viewport={{
+        once: true,
       }}
     >
       <FeatureBadge />

@@ -1,11 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
 import AnimatedRippleEffect from "@/app/components/animated/AnimatedRippleEffect";
+import SectionIcons from "./SectionIcons";
 
 const GridAndCircleBackground = () => {
   return (
     <>
       <AnimatedRippleEffect />
+      <SectionIcons />
       <svg
         className="opacity-55"
         width="500"
